@@ -1,19 +1,6 @@
-# 📄 template-node-ts
+# 🧠 divide-by-shape-reverse
 
-Project Template for creating Node.js apps with TypeScript
-
-## ⭐ Features
-
-- Code in TypeScript
-- Run TypeScript code using `ts-node`
-- Built-in tasks using npm scripts
-- Integration with Visual Studio Code
-  - Settings
-  - Tasks
-  - Debuging
-  - Extensions
-    - Automatic code checking with ESLint
-    - Automatic code formatting and fixing with Prettier
+A (failed) attempt to create a reverse algorithm for the ['divide by shape' game mode from 'Dual Brain Vol. 3'](https://youtu.be/nUvhA14xvrA?t=1117)
 
 ## 🛠️ Development
 
@@ -22,49 +9,22 @@ These instructions will get you a copy of this project up and running on your lo
 ### 📋 Prerequisites
 
 - [Node.js](https://nodejs.org) - JavaScript run-time environment
-  - After installing it, use `npm i` in the project's root folder to install all dependencies
 
 #### Visual Studio Code Extensions
 
 This project is intended to be used with Visual Studio Code and the following extensions are recommended:
 
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - Integrates ESLint JavaScript into VS Code
+- [JavaScript Debugger (Nightly)](https://marketplace.visualstudio.com/items?itemName=ms-vscode.js-debug-nightly) - An extension for debugging Node.js programs and Chrome
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Code formatter using prettier
 
-### 🚀 Built-in Tasks
+### 🚀 Getting Started
 
-This project uses npm scripts for running tasks:
-
-```bash
-# lint the project using eslint
-npm run lint
-
-# removes the generated folder
-npm run clean
-
-# build the project
-# (includes clean and lint)
-npm run build
-
-# build the project without linting
-# (includes clean)
-npm run build-only
-
-# run TypeScript code using ts-node
-npm run start:ts
-# or just
-npm start
-
-# run generated JavaScript code using node
-# (does NOT include build)
-npm run start:js
-
-# publish the project
-# (includes build)
-npm publish
-```
-
-VS Code tasks are also included for `lint`, `build`, `build-only`, `start:ts` and `start:js`.
+1. Clone this project
+1. Open the project's root folder in VS Code
+1. Open the terminal
+1. Run `npm i` to install all dependencies
+1. Run `npm start` to run the program
 
 ## 🧰 Built With
 
@@ -79,3 +39,7 @@ VS Code tasks are also included for `lint`, `build`, `build-only`, `start:ts` an
 ## 📃 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👍 Acknowledgments
+
+- Special thanks to [GameGrumps](https://www.youtube.com/user/GameGrumps) for [the inspiration](https://youtu.be/nUvhA14xvrA?t=1649) and being a never-ending source of joy

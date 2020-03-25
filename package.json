@@ -1,21 +1,22 @@
 {
-  "name": "template-node-ts",
+  "name": "divide-by-shape-reverse",
   "version": "0.1.0",
-  "description": "Project Template for creating Node.js apps with TypeScript",
+  "description": "A (failed) attempt to create a reverse algorithm for the 'divide by shape' game mode from 'Dual Brain Vol. 3'",
   "author": "contact.robin.hartmann@gmail.com",
   "license": "MIT",
   "main": "dist/lib/lib.js",
-  "bin": {
-    "print-pretty-hello-world": "dist/bin/bin.js"
-  },
+  "bin": "dist/bin/bin.js",
   "engines": {
     "node": ">=10.18.1"
   },
+  "repository": "github:robin-hartmann/divide-by-shape-reverse",
   "dependencies": {
-    "figlet": "^1.3.0"
+    "@types/chalk": "^2.2.0",
+    "@types/diff": "^4.0.2",
+    "chalk": "^3.0.0",
+    "diff": "^4.0.2"
   },
   "devDependencies": {
-    "@types/figlet": "^1.2.0",
     "@types/node": "^13.7.7",
     "@typescript-eslint/eslint-plugin": "^2.19.0",
     "@typescript-eslint/parser": "^2.22.0",
@@ -28,7 +29,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-unicorn": "^16.1.1",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.2",
     "shx": "^0.3.2",
     "ts-node": "^8.6.2",
     "typescript": "^3.8.3"

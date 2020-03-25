@@ -7,7 +7,7 @@ module.exports = {
     'import',
     'prettier',
     'promise',
-    'unicorn'
+    'unicorn',
   ],
   extends: [
     'airbnb-typescript/base',
@@ -23,15 +23,15 @@ module.exports = {
     'plugin:unicorn/recommended',
     'prettier',
     'prettier/@typescript-eslint',
-    'prettier/unicorn'
+    'prettier/unicorn',
   ],
   env: {
     es6: true,
-    node: true
+    node: true,
   },
   parserOptions: {
     tsconfigRootDir: __dirname,
-    project: './tsconfig.json'
+    project: './tsconfig.json',
   },
   rules: {
     // Too restrictive, writing ugly code to defend against a very unlikely scenario: https://eslint.org/docs/rules/no-prototype-builtins
@@ -40,11 +40,11 @@ module.exports = {
     // Makes no sense to allow type inferrence for expression parameters, but require typing the response
     '@typescript-eslint/explicit-function-return-type': [
       'error',
-      { allowExpressions: true, allowTypedFunctionExpressions: true }
+      { allowExpressions: true, allowTypedFunctionExpressions: true },
     ],
     '@typescript-eslint/no-use-before-define': [
       'error',
-      { functions: false, classes: true, variables: true, typedefs: true }
+      { functions: false, classes: true, variables: true, typedefs: true },
     ],
     // https://github.com/basarat/typescript-book/blob/master/docs/tips/defaultIsBad.md
     'import/prefer-default-export': 'off',
@@ -52,16 +52,17 @@ module.exports = {
     'node/no-missing-import': [
       'error',
       {
-        tryExtensions: ['.ts']
-      }
+        // some modules like `chalk` have a `.d.ts` file as their index file
+        tryExtensions: ['.d.ts', '.ts'],
+      },
     ],
     'node/no-unsupported-features/es-syntax': [
       'error',
       {
-        ignores: ['modules']
-      }
+        ignores: ['modules'],
+      },
     ],
     // Common abbreviations are known and readable
-    'unicorn/prevent-abbreviations': 'off'
-  }
+    'unicorn/prevent-abbreviations': 'off',
+  },
 }
