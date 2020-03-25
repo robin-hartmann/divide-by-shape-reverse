@@ -1,6 +1,6 @@
 {
   "name": "divide-by-shape-reverse",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A (failed) attempt to create a reverse algorithm for the 'divide by shape' game mode from 'Dual Brain Vol. 3'",
   "author": "contact.robin.hartmann@gmail.com",
   "license": "MIT",
