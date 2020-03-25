@@ -10,8 +10,8 @@ export function run(): void {
 
   console.log()
   console.log(`resulted in the following discard piles:`)
-  console.log(`left:\t${discardPiles.left.join('')}`)
-  console.log(`right:\t${discardPiles.right.join('')}`)
+  console.log(`left:  ${discardPiles.left.join('')}`)
+  console.log(`right: ${discardPiles.right.join('')}`)
 
   const restoredDeck = divideByShapeReverse(discardPiles)
   const strRestoredDeck = restoredDeck.join('')
@@ -25,8 +25,12 @@ export function run(): void {
   if (strRestoredDeck === strDeck) {
     console.log('restored deck matches the original deck')
   } else {
+    const diff = prettyDiff(strDeck, strRestoredDeck)
+
     console.log('restored deck does not match the original deck:')
-    console.log(prettyDiff(strDeck, strRestoredDeck))
+    console.log(`original: ${strDeck}`)
+    console.log(`restored: ${strRestoredDeck}`)
+    console.log(`diff:     ${diff}`)
   }
 }
 /* eslint-enable no-console */
