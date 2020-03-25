@@ -2,6 +2,14 @@
 
 A (failed) attempt to create a reverse algorithm for the ['divide by shape' game mode from 'Dual Brain Vol. 3'](https://youtu.be/nUvhA14xvrA?t=1117)
 
+## 💡 Conclusion
+
+The original algorithm creates ambiguous results, which cannot always be reversed to a distinct starting point.
+
+> The (decks) `AAABA` and `ABAAA` would both result in a left pile of `AA` and a right pile of `ABA`.
+>
+> -- Comment by YouTube user <cite>[ToyKnives](https://www.youtube.com/channel/UCW42l4IKifvS-Yuf_a9aObA)</cite>
+
 ## 🛠️ Development
 
 These instructions will get you a copy of this project up and running on your local machine for development and testing purposes.
