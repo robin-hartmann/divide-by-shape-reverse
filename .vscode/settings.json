@@ -19,8 +19,5 @@
   "prettier.requireConfig": true,
   "typescript.format.semicolons": "remove",
   "typescript.preferences.quoteStyle": "single",
-  "typescript.tsdk": "./node_modules/typescript/lib",
-  "[markdown]": {
-    "editor.tabSize": 4
-  }
+  "typescript.tsdk": "./node_modules/typescript/lib"
 }
