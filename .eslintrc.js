@@ -34,7 +34,7 @@ module.exports = {
     project: './tsconfig.json',
   },
   rules: {
-    curly: 'error',
+    curly: ['error', 'all'],
     // Too restrictive, writing ugly code to defend against a very unlikely scenario: https://eslint.org/docs/rules/no-prototype-builtins
     'no-prototype-builtins': 'off',
     '@typescript-eslint/no-floating-promises': 'error',
