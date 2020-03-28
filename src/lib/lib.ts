@@ -1,5 +1,5 @@
 import chalk from 'chalk'
-import { diffChars } from 'diff'
+import { Change, diffChars } from 'diff'
 
 export type DiscardPiles = {
   left: string[]
@@ -54,10 +54,10 @@ export function prettyDiff(strOriginal: string, strRestored: string): Decks {
 
   diffs.forEach((diff) => {
     if (!diff.added) {
-      arrOriginal.push(chalk`{${diff.removed ? 'red' : 'grey'} ${diff.value}}`)
+      arrOriginal.push(colorDiff(diff, diff.removed ? 'red' : 'grey'))
     }
     if (!diff.removed) {
-      arrRestored.push(chalk`{${diff.added ? 'green' : 'grey'} ${diff.value}}`)
+      arrRestored.push(colorDiff(diff, diff.added ? 'green' : 'grey'))
     }
   })
 
@@ -65,4 +65,8 @@ export function prettyDiff(strOriginal: string, strRestored: string): Decks {
     original: arrOriginal.join(''),
     restored: arrRestored.join(''),
   }
+}
+
+function colorDiff(diff: Change, color: 'grey' | 'green' | 'red'): string {
+  return chalk`{${color} ${diff.value}}`
 }
