@@ -32,14 +32,14 @@ export function divideByShapeReverse(discardPiles: DiscardPiles): string[] {
   }
 
   reverseDiscPiles.right.forEach((card) => {
-    deckArr.push(card)
+    deckArr.unshift(card)
 
     while (reverseDiscPiles.left[0] === card) {
-      deckArr.push(reverseDiscPiles.left.shift() as string)
+      deckArr.unshift(reverseDiscPiles.left.shift() as string)
     }
   })
 
-  return deckArr.reverse()
+  return deckArr
 }
 
 export function prettyDiff(strDeck1: string, strDeck2: string): string {
