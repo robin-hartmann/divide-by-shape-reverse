@@ -14,7 +14,7 @@ export function divideByShape(deck: string[]): DiscardPiles {
 
   deck.reduce<string | undefined>((prevCard, currCard) => {
     const targetPile =
-      currCard !== prevCard ? discardPiles.left : discardPiles.right
+      currCard !== prevCard ? discardPiles.right : discardPiles.left
 
     targetPile.push(currCard)
 
@@ -31,11 +31,11 @@ export function divideByShapeReverse(discardPiles: DiscardPiles): string[] {
     right: discardPiles.right.reverse(),
   }
 
-  reverseDiscPiles.left.forEach((card) => {
+  reverseDiscPiles.right.forEach((card) => {
     deckArr.push(card)
 
-    while (reverseDiscPiles.right[0] === card) {
-      deckArr.push(reverseDiscPiles.right.shift() as string)
+    while (reverseDiscPiles.left[0] === card) {
+      deckArr.push(reverseDiscPiles.left.shift() as string)
     }
   })
 
