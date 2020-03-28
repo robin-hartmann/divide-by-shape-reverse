@@ -6,6 +6,11 @@ export type DiscardPiles = {
   right: string[]
 }
 
+export type Decks = {
+  original: string
+  restored: string
+}
+
 export function divideByShape(deck: string[]): DiscardPiles {
   const discardPiles: DiscardPiles = {
     left: [],
@@ -42,19 +47,22 @@ export function divideByShapeReverse(discardPiles: DiscardPiles): string[] {
   return deckArr
 }
 
-export function prettyDiff(strDeck1: string, strDeck2: string): string {
-  const diffs = diffChars(strDeck1, strDeck2)
-  const coloredDiff = diffs.map((diff) => {
-    if (diff.added) {
-      return chalk.green(diff.value)
-    }
+export function prettyDiff(strOriginal: string, strRestored: string): Decks {
+  const diffs = diffChars(strOriginal, strRestored)
+  const arrOriginal: string[] = []
+  const arrRestored: string[] = []
 
-    if (diff.removed) {
-      return chalk.red(diff.value)
+  diffs.forEach((diff) => {
+    if (!diff.added) {
+      arrOriginal.push(chalk`{${diff.removed ? 'red' : 'grey'} ${diff.value}}`)
     }
-
-    return chalk.grey(diff.value)
+    if (!diff.removed) {
+      arrRestored.push(chalk`{${diff.added ? 'green' : 'grey'} ${diff.value}}`)
+    }
   })
 
-  return coloredDiff.join('')
+  return {
+    original: arrOriginal.join(''),
+    restored: arrRestored.join(''),
+  }
 }

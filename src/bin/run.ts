@@ -25,12 +25,11 @@ export function run(): void {
   if (strRestoredDeck === strDeck) {
     console.log('restored deck matches the original deck')
   } else {
-    const diff = prettyDiff(strDeck, strRestoredDeck)
+    const diffDecks = prettyDiff(strDeck, strRestoredDeck)
 
     console.log('restored deck does not match the original deck:')
-    console.log(`original: ${strDeck}`)
-    console.log(`restored: ${strRestoredDeck}`)
-    console.log(`diff:     ${diff}`)
+    console.log(`original: ${diffDecks.original}`)
+    console.log(`restored: ${diffDecks.restored}`)
   }
 }
 /* eslint-enable no-console */
